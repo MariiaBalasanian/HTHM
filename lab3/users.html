@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title data-i18n="users">Користувачі</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="grid.css">
+  <style>
+    td input {
+      width: 100%;
+      padding: 4px;
+    }
+    .form-inline {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .form-inline input {
+      flex: 1;
+    }
+  </style>
+</head>
+<body class="layout">
+  <header class="layout__header">
+    <h1 data-i18n="users">Користувачі</h1>
+  </header>
+
+  <nav class="layout__nav">
+    <ul class="nav__list">
+      <li class="nav__item"><a href="index.html" data-i18n="home">Головна</a></li>
+      <li class="nav__item"><a href="users.html" data-i18n="users">Користувачі</a></li>
+      <li class="nav__item"><a href="settings.html" data-i18n="settings">Налаштування</a></li>
+    </ul>
+  </nav>
+
+  <main class="layout__main">
+    <section class="section">
+      <h2 data-i18n="users">Користувачі</h2>
+
+      <form id="addUserForm" class="form-inline">
+        <input type="text" id="nameInput" placeholder="Ім’я" required>
+        <input type="email" id="emailInput" placeholder="Email" required>
+        <button type="submit">➕</button>
+      </form>
+
+      <table>
+        <thead>
+          <tr>
+            <th data-i18n="name">Ім’я</th>
+            <th data-i18n="email">Email</th>
+            <th data-i18n="do">Дії</th>
+          </tr>
+        </thead>
+        <tbody id="userTableBody">
+          <!-- Users injected here -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer class="layout__footer">
+    <p>&copy; 2025 <span data-i18n="title">Адмін-панель</span></p>
+  </footer>
+  
+  <div class="floating-bubble"><a href="settings.html">🔧</a></div>
+  
+  <script src="script.js"></script>
+  <script src="users.js"></script>
+</body>
+</html>

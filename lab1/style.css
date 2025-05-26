@@ -1,30 +1,37 @@
-/* Обнуляем отступы */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Обёртка для всей страницы */
+
 html, body {
   height: 100%;
 }
 
+
 body {
   display: flex;
   flex-direction: column;
-  font-family: Arial, sans-serif;
-  background-color: #f5f7fa;
+  font-family: 'Roboto', sans-serif;
   color: #333;
+  background: rgb(209, 209, 209);
+  background: linear-gradient(135deg, #e7e7e7 0%, #aeb8b9 50%, #e0e0e0 100%);
+  background-attachment: fixed;
+  background-size: cover;
 }
 
-/* Контент растягивается */
+
+
 main {
   flex: 1;
+  margin-top: 7rem;
   padding: 2em;
+  padding-bottom: unset;
 }
 
-/* Хедер и футер */
+
 header, footer {
   background-color: #24292e;
   color: white;
@@ -32,7 +39,15 @@ header, footer {
   text-align: center;
 }
 
-/* Навигация */
+header {
+  position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+
 nav ul.nav {
   list-style: none;
   display: flex;
@@ -48,6 +63,9 @@ nav ul.nav li a {
   color: white;
   text-decoration: none;
 }
+nav ul li a:hover {
+    text-shadow: 0 0.125rem 0.25rem rgba(255, 255, 255, 0.5);
+}
 
 /* Секции */
 section {
@@ -58,3 +76,144 @@ section {
   max-width: 800px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
+h2, h3, h4 {
+  padding-bottom: 0.5rem;
+}
+
+img {
+  width: clamp(7rem, 5vw, 10rem);
+  max-width: 10rem;
+  height: auto;
+}
+
+#Frog {
+  display: flex;
+  align-items: center; 
+  justify-content: space-between; 
+  gap: 2em;
+  padding: 2em;
+}
+
+ol {
+  padding-top: 0.3rem;
+  padding-left: 1.5rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  margin-bottom: 2em;
+}
+
+
+th, td {
+  padding: 1em;
+  text-align: left;
+  border-bottom: 1px solid #e0e4ec;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+}
+
+th {
+  background-color: #f0f3f7;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+tr:hover {
+  background-color: #f9fafc;
+}
+
+label {
+  align-items: center;
+  width: 100%;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="tel"] {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+.btn {
+  margin: 1rem 0; 
+  color: rgb(0, 0, 0);
+  background-color: #e0e4ec;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size:medium;
+  font-family: inherit;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+select {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: inherit;
+  background-color: white;
+}
+
+.checkbox-label {
+  align-items: center;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: auto;
+  margin-left: 0;
+  flex: none;
+}
+
+.checkbox-label span {
+  width: 8куь;
+}
+
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* Соотношение 16:9 */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  background: #f5f5f5;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+
+.audio-player {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  max-width: 500px;
+}
+
+audio {
+  width: 100%;
+  max-width: 500px;
+  margin-top: 1rem;
+}
+

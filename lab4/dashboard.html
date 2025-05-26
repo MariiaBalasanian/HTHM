@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="title">Адмін-панель</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script>
+    const settings = JSON.parse(localStorage.getItem('admin-settings')) || {};
+    document.documentElement.setAttribute('data-bs-theme', settings.theme === 'dark' ? 'dark' : 'light');
+  </script>
+  <style>
+    .block {
+      background-color: #0d6efd;
+      color: white;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      text-align: center;
+      border-radius: 0.5rem;
+    }
+  </style>
+</head>
+<body class="d-flex flex-column min-vh-100">
+  <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#" data-i18n="title">Адмін-панель</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html" data-i18n="home">Головна</a></li>
+          <li class="nav-item"><a class="nav-link" href="users.html" data-i18n="users">Користувачі</a></li>
+          <li class="nav-item"><a class="nav-link" href="settings.html" data-i18n="settings">Налаштування</a></li>
+          <li class="nav-item"><a class="nav-link" href="dashboard.html">Макет панелі</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container my-4 flex-grow-1">
+    <h2>Структура адміністративної панелі</h2>
+<p class="mb-4 text-muted">Нижче представлено приклад умовного макету адмін-панелі, де блоки імітують модулі або віджети системи управління: статистика, повідомлення, користувачі, дії, тощо.</p>
+
+    <!-- Row 1: 4 блоки -->
+    <div class="row">
+      <div class="col-12 col-md-3"><div class="block">Статистика</div></div>
+      <div class="col-12 col-md-3"><div class="block">Користувачі</div></div>
+      <div class="col-12 col-md-3"><div class="block">Повідомлення</div></div>
+      <div class="col-12 col-md-3"><div class="block">Події</div></div>
+    </div>
+
+    <!-- Row 2: 2 блоки, другий вкладений у 2x3 -->
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <div class="block">Звіти</div>
+      </div>
+      <div class="col-12 col-md-6 d-none d-sm-block">
+        <div class="row">
+          <div class="col-6"><div class="block">Фільтр</div></div>
+          <div class="col-6"><div class="block">Сортування</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Row 3: 1 блок (5 колонок), 2 по 2, на xs замена -->
+    <div class="row">
+      <div class="d-none d-sm-block col-sm-5"><div class="block">Огляд системи</div></div>
+      <div class="d-none d-sm-block col-sm-2"><div class="block">Нагадування</div></div>
+      <div class="d-none d-sm-block col-sm-2"><div class="block">Швидкі дії</div></div>
+      <div class="col-12 d-sm-none"><div class="block bg-transparent border border-secondary text-muted">Порожнє місце</div></div>
+    </div>
+  </main>
+
+  <footer class="bg-dark text-white text-center py-3 mt-auto">
+    &copy; 2025 <span data-i18n="title">Адмін-панель</span>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="settings.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
