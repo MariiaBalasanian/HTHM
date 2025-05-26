@@ -1,0 +1,14 @@
+{
+  "title": "Admin Panel",
+  "settings": "Settings",
+  "users": "Users",
+  "name": "Name",
+  "do": "Actions",
+  "home": "Home",
+  "save": "Save",
+  "light": "Light",
+  "dark": "Dark",
+  "language": "Interface Language",
+  "theme": "Theme",
+  "notification": "Enable notifications"
+}

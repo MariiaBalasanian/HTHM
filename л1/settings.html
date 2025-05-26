@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Налаштування</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Студент ХНУРЕ" />
+  <meta name="description" content="Сторінка налаштувань адмін-панелі" />
+  <meta name="keywords" content="налаштування, адмінка, HTML, CSS" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Налаштування</h1>
+    <nav>
+      <ul class="nav">
+        <li><a href="index.html">Головна</a></li>
+        <li><a href="users.html">Користувачі</a></li>
+        <li><a href="settings.html">Налаштування</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Основні налаштування</h2>
+      <form>
+        <label>Мова інтерфейсу:
+          <select name="language">
+            <option value="uk">Українська</option>
+            <option value="en">English</option>
+          </select>
+        </label>
+        <br><br>
+
+        <label>Тема:
+          <select name="theme">
+            <option value="light">Світла</option>
+            <option value="dark">Темна</option>
+          </select>
+        </label>
+        <br><br>
+
+        <label>
+          <input type="checkbox" name="notifications" checked>
+          Увімкнути повідомлення
+        </label>
+        <br><br>
+
+        <input type="submit" value="Зберегти зміни">
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Налаштування адмін-панелі</p>
+  </footer>
+</body>
+</html>

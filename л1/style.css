@@ -1,0 +1,60 @@
+/* Обнуляем отступы */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Обёртка для всей страницы */
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+}
+
+/* Контент растягивается */
+main {
+  flex: 1;
+  padding: 2em;
+}
+
+/* Хедер и футер */
+header, footer {
+  background-color: #24292e;
+  color: white;
+  padding: 1em;
+  text-align: center;
+}
+
+/* Навигация */
+nav ul.nav {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+nav ul.nav li {
+  margin: 0 1em;
+}
+
+nav ul.nav li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Секции */
+section {
+  background-color: white;
+  padding: 1em;
+  margin: 1em auto;
+  border-radius: 5px;
+  max-width: 800px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
