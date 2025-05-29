@@ -2,35 +2,21 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8">
-  <title data-i18n="users">Користувачі</title>
+  <title>Адмін-панель</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="base.css">
   <link rel="stylesheet" href="grid.css">
-  <style>
-    td input {
-      width: 100%;
-      padding: 4px;
-    }
-    .form-inline {
-      display: flex;
-      gap: 10px;
-      margin-bottom: 10px;
-    }
-    .form-inline input {
-      flex: 1;
-    }
-  </style>
 </head>
 <body class="layout">
-  <header class="layout__header">
-    <h1 data-i18n="users">Користувачі</h1>
+  <header class="header">
+    <h1 class="header__title">Адмін-панель</h1>
   </header>
-
-  <nav class="layout__nav">
+  <nav class="nav">
     <ul class="nav__list">
       <li class="nav__item"><a href="index.html" data-i18n="home">Головна</a></li>
       <li class="nav__item"><a href="users.html" data-i18n="users">Користувачі</a></li>
       <li class="nav__item"><a href="settings.html" data-i18n="settings">Налаштування</a></li>
+      <li class="nav__item"><a href="find.html" data-i18n="we_are_hiring">Ми шукаємо</a></li>
     </ul>
   </nav>
 
@@ -57,14 +43,97 @@
         </tbody>
       </table>
     </section>
+
+    <section class="section">
+      <h2 class="section__title" data-i18n="text_size">1. Текст з вибраним розміром</h2>
+      <input type="text" id="textInput" class="section__input" data-i18n-placeholder="input_text" placeholder="Введіть текст" />
+      <input type="number" id="fontSizeInput" class="section__input" data-i18n-placeholder="font_size" placeholder="Розмір шрифту (px)" />
+      <button onclick="changeFontSize()" class="section__button" data-i18n="change">Змінити</button>
+      <p id="resizableText" class="section__text" data-i18n="here_will_be_text">Тут буде ваш текст</p>
+    </section>
+
+    <section class="section">
+      <h2 class="section__title" data-i18n="moving_image">2. Картинка, що рухається</h2>
+      <img id="movingImage" class="section__image" src="ддд.jpg" style="position:absolute; width:50px;" />
+    </section>
+
+    <section class="section">
+      <h2 class="section__title" data-i18n="change_paragraphs">3. Змінити розмір усіх абзаців</h2>
+      <p class="section__text" data-i18n="paragraph_1">Абзац 1</p>
+      <p class="section__text" data-i18n="paragraph_2">Абзац 2</p>
+      <button onclick="resizeParagraphs()" class="section__button" data-i18n="change_size">Змінити розмір</button>
+    </section>
+
+    <section class="section">
+      <h2 class="section__title" data-i18n="clock">4. Годинник</h2>
+      <div id="clock" class="section__clock" style="font-size: 24px; font-weight: bold;"></div>
+    </section>
+
+    <section class="section">
+      <h2 class="section__title" data-i18n="fade">5. Поступове витирання</h2>
+      <div id="fadeBox" class="section__fadebox" data-i18n="fade_text" style="width:200px;height:100px;background:red;color:white;">Я зникну...</div>
+      <button onclick="fadeOut()" class="section__button" data-i18n="run">Запустити</button>
+    </section>
+
+    <section class="section">
+      <h2 class="section__title" data-i18n="tooltip">6. Підказка</h2>
+      <button id="tooltipButton" class="section__button" data-i18n="click_me">Натисни мене</button>
+      <div id="tooltip" class="tooltip section__tooltip" style="display: none;" data-i18n="tooltip_text">Я підказка!</div>
+    </section>
+
+    <section class="section">
+      <h2 class="section__title" data-i18n="swap_columns">7. Переміщення колонок таблиці</h2>
+      <table id="swapTable" class="users-table section__table">
+        <tr>
+          <th data-i18n="person">Людина</th>
+          <th data-i18n="qualification">Кваліфікація</th>
+        </tr>
+        <tr><td>Дмитро</td><td data-i18n="unemployed">Безробітній</td></tr>
+        <tr><td>Ярослав</td><td data-i18n="mentally_ill">Душевно хворий</td></tr>
+      </table>
+      <button onclick="swapColumns()" class="section__button" data-i18n="swap">Поміняти місцями</button>
+    </section>
+
+    <section class="section">
+      <h2 class="section__title" data-i18n="color_square">8. Зміна кольору квадрата</h2>
+      <select id="colorSelector" class="section__input" onchange="changeSquareColor()">
+        <option value="black" data-i18n="black">Чорний</option>
+        <option value="red" data-i18n="red">Червоний</option>
+        <option value="green" data-i18n="green">Зелений</option>
+        <option value="blue" data-i18n="blue">Синій</option>
+        <option value="yellow" data-i18n="yellow">Жовтий</option>
+      </select>
+      <div id="colorSquare" class="section__square" style="width:100px;height:100px;background:black;float:right;"></div>
+    </section>
+
+    <section class="section">
+      <h2 class="section__title" data-i18n="font_remember">9. Зміна шрифту з запам'ятовуванням</h2>
+      <button onclick="adjustFontSize(1)" class="section__button" data-i18n="a_plus">A+</button>
+      <button onclick="adjustFontSize(-1)" class="section__button" data-i18n="a_minus">A-</button>
+      <p id="resizableTextMemory" class="section__text" data-i18n="resizable_text_memory">Цей текст змінює розмір</p>
+    </section>
+
+    <section class="section">
+      <h2 class="section__title" data-i18n="ad">10. Реклама</h2>
+      <div id="adBanner" class="section__ad" style="background:orange;padding:10px;">
+        <span data-i18n="ad_text">Це реклама!</span>
+        <button onclick="hideAd()" class="section__button" data-i18n="remove">Прибрати</button>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section__title" data-i18n="browser_data">11. Дані браузера</h2>
+      <p id="browserInfo" class="section__text"></p>
+    </section>
   </main>
 
-  <footer class="layout__footer">
-    <p>&copy; 2025 <span data-i18n="title">Адмін-панель</span></p>
+  <footer class="footer">
+    <p>&copy; 2025 Адмін-панель. Всі права захищено.</p>
   </footer>
   
   <div class="floating-bubble"><a href="settings.html">🔧</a></div>
   
+  <script src="l3.js"></script>
   <script src="script.js"></script>
   <script src="users.js"></script>
 </body>

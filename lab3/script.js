@@ -21,7 +21,6 @@ window.addEventListener('DOMContentLoaded', () => {
   const lang = settings.language || 'uk';
   const theme = settings.theme || 'light';
 
-  applyTheme(theme);
   applyLanguage(lang);
 
   if (form) {
@@ -37,11 +36,9 @@ if (form) {
     e.preventDefault();
     const newSettings = {
       language: form.language.value,
-      theme: form.theme.value,
       notifications: form.notifications.checked
     };
     localStorage.setItem('admin-settings', JSON.stringify(newSettings));
-    applyTheme(newSettings.theme);
     applyLanguage(newSettings.language);
     saveStatus.style.display = 'block';
     setTimeout(() => saveStatus.style.display = 'none', 2000);

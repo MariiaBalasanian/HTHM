@@ -2,24 +2,24 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8">
-  <title data-i18n="settings">Налаштування</title>
+  <title>Адмін-панель</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="base.css">
   <link rel="stylesheet" href="grid.css">
 </head>
 <body class="layout">
-  <header class="layout__header">
-    <h1 data-i18n="settings">Налаштування</h1>
+  <header class="header">
+    <h1 class="header__title">Адмін-панель</h1>
   </header>
-
-  <nav class="layout__nav">
+  <nav class="nav">
     <ul class="nav__list">
       <li class="nav__item"><a href="index.html" data-i18n="home">Головна</a></li>
       <li class="nav__item"><a href="users.html" data-i18n="users">Користувачі</a></li>
       <li class="nav__item"><a href="settings.html" data-i18n="settings">Налаштування</a></li>
+      <li class="nav__item"><a href="find.html" data-i18n="we_are_hiring">Ми шукаємо</a></li>
     </ul>
   </nav>
-
+  
   <main class="layout__main">
     <section class="section">
       <h2 data-i18n="settings">Налаштування</h2>
@@ -29,14 +29,6 @@
           <select id="language">
             <option value="uk">Українська</option>
             <option value="en">English</option>
-          </select>
-        </div><br>
-
-        <div class="form-group">
-          <label for="theme"><span data-i18n="theme">Тема:</span></label>
-          <select id="theme">
-            <option value="light" data-i18n="light">Світла</option>
-            <option value="dark" data-i18n="dark">Темна</option>
           </select>
         </div><br>
 

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Адмін-панель</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="grid.css">
+  <link rel="stylesheet" href="find.css">
+</head>
+<body class="layout">
+  <header class="header">
+    <h1 class="header__title">Адмін-панель</h1>
+  </header>
+
+  <nav class="nav">
+    <ul class="nav__list">
+      <li class="nav__item"><a href="index.html" data-i18n="home">Головна</a></li>
+      <li class="nav__item"><a href="users.html" data-i18n="users">Користувачі</a></li>
+      <li class="nav__item"><a href="settings.html" data-i18n="settings">Налаштування</a></li>
+      <li class="nav__item"><a href="find.html" data-i18n="we_are_hiring">Ми шукаємо</a></li>
+    </ul>
+  </nav>
+
+
+<main class="layout__main">
+      <section class="section">
+      <div class="progress-bar">
+        <div class="progress-bar__label" data-i18n="progress_label"></div>
+        <span class="progress-bar__percent">60%</span>
+        <div class="progress-bar__track">
+          <div class="progress-bar__fill" style="width: 65%;"></div>
+        </div>
+      </div>
+
+      <h2 class="section__title" data-i18n="we_are_hiring">Ми шукаємо:</h2>
+      <div class="vacancies">
+        <div class="vacancy-card">
+          <div>
+            <div class="vacancy-card__title" data-i18n="frontend_dev">Front-end розробник</div>
+            <div class="vacancy-card__desc" data-i18n="frontend_desc">
+              Розробка сучасних інтерфейсів для наших продуктів. Вітається знання HTML, CSS (БЕМ), JavaScript, React.
+            </div>
+            <div class="vacancy-card__details" data-i18n="frontend_details">Досвід: від 1 року | Фултайм</div>
+          </div>
+          <a href="mailto:hr@example.com?subject=Вакансія Front-end" class="vacancy-card__btn" data-i18n="apply">Відгукнутись</a>
+        </div>
+        <div class="vacancy-card">
+          <div>
+            <div class="vacancy-card__title" data-i18n="backend_dev">Back-end розробник</div>
+            <div class="vacancy-card__desc" data-i18n="backend_desc">
+              Розробка серверної логіки, API, робота з базами даних. Бажано досвід з Python/Django або Node.js.
+            </div>
+            <div class="vacancy-card__details" data-i18n="backend_details">Досвід: 2+ роки | Гібрид/Віддалено</div>
+          </div>
+          <a href="mailto:hr@example.com?subject=Вакансія Back-end" class="vacancy-card__btn" data-i18n="apply">Відгукнутись</a>
+        </div>
+        <div class="vacancy-card">
+          <div>
+            <div class="vacancy-card__title" data-i18n="uiux">UI/UX дизайнер</div>
+            <div class="vacancy-card__desc" data-i18n="uiux_desc">
+              Створення зрозумілих та стильних інтерфейсів для веб і мобільних додатків. Вітається досвід з Figma, Adobe XD.
+            </div>
+            <div class="vacancy-card__details" data-i18n="uiux_details">Досвід: від 1 року | Часткова зайнятість</div>
+          </div>
+          <a href="mailto:hr@example.com?subject=Вакансія Дизайнер" class="vacancy-card__btn" data-i18n="apply">Відгукнутись</a>
+        </div>
+        <div class="vacancy-card">
+          <div>
+            <div class="vacancy-card__title" data-i18n="pm">Менеджер проектів</div>
+            <div class="vacancy-card__desc" data-i18n="pm_desc">
+              Планування та організація роботи команди, комунікація з замовниками, контроль дедлайнів. Базовий рівень англійської — must.
+            </div>
+            <div class="vacancy-card__details" data-i18n="pm_details">Досвід: 2+ роки | Офіс/Гібрид</div>
+          </div>
+          <a href="mailto:hr@example.com?subject=Вакансія Менеджер" class="vacancy-card__btn" data-i18n="apply">Відгукнутись</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section feedback-form">
+      <h2 class="section__title" data-i18n="feedback">Зворотний зв’язок</h2>
+      <form class="feedback-form__form" action="#" method="post" autocomplete="off">
+        <div class="feedback-form__group">
+          <label class="feedback-form__label" for="fb-name" data-i18n="your_name">Ваше ім’я:</label>
+          <input class="feedback-form__input" type="text" id="fb-name" name="name" required data-i18n-placeholder="your_name_placeholder">
+        </div>
+        <div class="feedback-form__group">
+          <label class="feedback-form__label" for="fb-email" data-i18n="email">Email:</label>
+          <input class="feedback-form__input" type="email" id="fb-email" name="email" required data-i18n-placeholder="email">
+        </div>
+        <div class="feedback-form__group">
+          <label class="feedback-form__label" for="fb-phone" data-i18n="phone">Телефон:</label>
+          <input class="feedback-form__input" type="tel" id="fb-phone" name="phone" pattern="[+]{1}[0-9]{12}" placeholder="+380123456789" data-i18n-placeholder="phone_placeholder">
+        </div>
+        <div class="feedback-form__group">
+          <label class="feedback-form__label" for="fb-url" data-i18n="url">URL сайту:</label>
+          <input class="feedback-form__input" type="url" id="fb-url" name="url" placeholder="https://example.com" data-i18n-placeholder="url_placeholder">
+        </div>
+        <div class="feedback-form__group">
+          <label class="feedback-form__label" for="fb-datetime" data-i18n="datetime">Дата і час:</label>
+          <input class="feedback-form__input" type="datetime-local" id="fb-datetime" name="datetime">
+        </div>
+        <div class="feedback-form__group">
+          <label class="feedback-form__label" for="fb-message" data-i18n="message">Повідомлення:</label>
+          <textarea class="feedback-form__textarea" id="fb-message" name="message" rows="4" required data-i18n-placeholder="message_placeholder"></textarea>
+        </div>
+        <div class="feedback-form__group">
+          <button class="feedback-form__submit" type="submit" data-i18n="send">Надіслати</button>
+        </div>
+      </form>
+    </section>
+
+  </main>
+  <div class="floating-bubble"><a href="settings.html">🔧</a></div>
+  <footer class="footer">
+    <p>&copy; 2025 Адмін-панель</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+

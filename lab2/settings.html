@@ -8,40 +8,54 @@
   <link rel="stylesheet" href="grid.css">
 </head>
 <body class="layout">
-  <header class="layout__header">
+  <header class="header">
     <h1 class="header__title">Налаштування</h1>
   </header>
 
-  <nav class="layout__nav">
+  <nav class="nav">
     <ul class="nav__list">
-      <li class="nav__item"><a href="index.html">Головна</a></li>
-      <li class="nav__item"><a href="users.html">Користувачі</a></li>
-      <li class="nav__item"><a href="settings.html">Налаштування</a></li>
+        <li class="nav__item"><a href="index.html">Головна</a></li>
+        <li class="nav__item"><a href="users.html">Користувачі</a></li>
+        <li class="nav__item"><a href="settings.html">Налаштування</a></li>
+        <li class="nav__item"><a href="find.html">Ми шукаємо</a></li>
     </ul>
   </nav>
 
   <main class="layout__main">
     <section class="section">
       <h2 class="section__title">Основні налаштування</h2>
-      <form>
-        <label>Мова:
-          <select><option>Українська</option><option>English</option></select>
-        </label><br><br>
-        <label>Тема:
-          <select><option>Світла</option><option>Темна</option></select>
-        </label><br><br>
-
-
-        <label><input type="checkbox" id="notifications" checked> Увімкнути повідомлення</label><br><br>
-
-        <input type="submit" value="Зберегти">
+      <form class="settings-form">
+        <div class="settings-form__group">
+          <label class="settings-form__label">Мова:
+            <select class="settings-form__select">
+              <option>Українська</option>
+              <option>English</option>
+            </select>
+          </label>
+        </div>
+        <div class="settings-form__group">
+          <label class="settings-form__label">Тема:
+            <select class="settings-form__select">
+              <option>Світла</option>
+              <option>Темна</option>
+            </select>
+          </label>
+        </div>
+        <div class="settings-form__group">
+          <label class="settings-form__label">
+            <input class="settings-form__checkbox" type="checkbox" id="notifications" checked>
+            Увімкнути повідомлення
+          </label>
+        </div>
+        <div class="settings-form__group">
+          <input class="settings-form__submit" type="submit" value="Зберегти">
+        </div>
       </form>
     </section>
   </main>
 
-  <footer class="layout__footer">
+  <footer class="footer">
     <p>&copy; 2025 Адмін-панель</p>
   </footer>
-
 </body>
 </html>

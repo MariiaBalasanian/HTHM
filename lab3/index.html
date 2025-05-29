@@ -2,37 +2,63 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8">
-  <title data-i18n="title">Адмін-панель</title>
+  <title>Адмін-панель</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="base.css">
   <link rel="stylesheet" href="grid.css">
 </head>
 <body class="layout">
-  <header class="layout__header">
-    <h1 data-i18n="title">Адмін-панель</h1>
+  <header class="header">
+    <h1 class="header__title">Адмін-панель</h1>
   </header>
-
-  <nav class="layout__nav">
+  <nav class="nav">
     <ul class="nav__list">
       <li class="nav__item"><a href="index.html" data-i18n="home">Головна</a></li>
       <li class="nav__item"><a href="users.html" data-i18n="users">Користувачі</a></li>
       <li class="nav__item"><a href="settings.html" data-i18n="settings">Налаштування</a></li>
+      <li class="nav__item"><a href="find.html" data-i18n="we_are_hiring">Ми шукаємо</a></li>
     </ul>
   </nav>
-
   <main class="layout__main">
-    <section class="section">
-      <h2 data-i18n="home">Головна</h2>
-      <p>Це стартова сторінка адмін-панелі.</p>
-    </section>
+    <article class="article">
+      <section class="section">
+        <h2 class="section__title">Про систему</h2>
+        <p class="section__text">Ця адмін-панель була створена для того, щоб допомогати вам:</p>
+        <ol class="section__list">
+          <li class="section__list-item">переглядати</li>
+          <li class="section__list-item">створювати</li>
+          <li class="section__list-item">редагувати</li>
+          <li class="section__list-item">видаляти об'єкти системи</li>
+        </ol>
+      </section>
+      <section class="section frog">
+        <div class="frog__info">
+          <h3>Ось вам жабка</h3>
+          <h4>(для гарного настрою)</h4>
+          <p>Вона буде охороняти вас сьогодні від усього недоброго!</p>
+        </div>
+        <img class="frog__img" src="https://i.pinimg.com/736x/7d/ae/09/7dae09394a2162e81dfac2a809cd942e.jpg" alt="Жабка">
+      </section>
+      <section class="section">
+        <h2 class="section__title">Відео для підняття настрою</h2>
+        <div class="video-container">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/F1fl60ypdLs?si=8DcEhJtirePwq_H3" title="YouTube video player" allowfullscreen></iframe>
+        </div>
+      </section>
+      <section class="section">
+        <h2 class="section__title">І ще трошки аудіоконтенту</h2>
+        <audio class="section__audio" controls>
+          <source src="./audio/The Road To Mordor - Ezra Lipp.mp3" type="audio/mpeg">
+          Ваш браузер не підтримує аудіо.
+        </audio>
+      </section>
+    </article>
+   <div class="floating-bubble"><a href="settings.html">🔧</a></div>
   </main>
-
-  <footer class="layout__footer">
-    <p>&copy; 2025 <span data-i18n="title">Адмін-панель</span></p>
+  <footer class="footer">
+    <p>&copy; 2025 Адмін-панель. Всі права захищено.</p>
   </footer>
-
-  <div class="floating-bubble"><a href="settings.html">🔧</a></div>
-  
   <script src="script.js"></script>
 </body>
+
 </html>
