@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Переваги нашої адмінки</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      padding-top: 70px;
+      font-size: 0.76rem;
+    }
+    .block {
+      background: #e3f0fb;
+      border: 2px solid #007bff33;
+      border-radius: 14px;
+      min-height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 500;
+      margin-bottom: 10px;
+      font-size: 0.77rem;
+      transition: background 0.2s;
+      text-align: center;
+      padding: 10px;
+    }
+    .block:hover {
+      background: #d1eaff;
+    }
+    .features-list {
+      margin-top: 32px;
+    }
+    .features-list li {
+      margin-bottom: 0.7em;
+      font-size: 0.96rem;
+    }
+    @media (max-width: 575px) {
+      .block { font-size: 0.6rem; }
+      body { font-size: 0.6rem; }
+    }
+  </style>
+</head>
+<body class="bg-light">
+  <!-- Навігація Bootstrap -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Адмінка</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#adminNavbar" aria-controls="adminNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="adminNavbar">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Головна</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="users.html">Користувачі</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="settings.html">Налаштування</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="find.html">Ми шукаємо</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Переваги</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+
+    <!-- Перший ряд: 2 блоки -->
+    <div class="row mb-3">
+      <div class="col-12 col-md-4 mb-3 mb-md-0">
+        <div class="block">
+          <b>Оперативний моніторинг</b><br>
+          Вся важлива інформація та метрики — на головній сторінці. Можна швидко відстежити статус системи та події.
+        </div>
+      </div>
+      <div class="col-12 col-md-8">
+        <div class="block">
+          <b>Гнучке управління користувачами</b><br>
+          Створення, редагування та видалення акаунтів, налаштування прав доступу для різних ролей у два кліки.
+        </div>
+      </div>
+    </div>
+
+    <!-- Другий ряд: 6 блоків -->
+    <div class="row mb-3">
+      <div class="col-6 col-md-2">
+        <div class="block d-md-block d-sm-block d-none">
+          <b>Інтуїтивна навігація</b><br>
+          Легко знайти потрібний розділ завдяки зрозумілому меню та структурі.
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="block">
+          <b>Налаштування повідомлень</b><br>
+          Гнучке керування e-mail/SMS/пуш-сповіщеннями. Жодної зайвої інформації!
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="block d-md-block d-sm-block d-none">
+          <b>Відкритий API</b><br>
+          Інтеграція з іншими сервісами через REST API для автоматизації.
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="block">
+          <b>Безпечний вхід</b><br>
+          Підтримка двофакторної автентифікації та журналу дій користувачів.
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="block d-md-block d-sm-block d-none">
+          <b>Масштабованість</b><br>
+          Система легко працює як із десятками, так і з тисячами об'єктів.
+        </div>
+      </div>
+      <div class="col-6 col-md-2">
+        <div class="block">
+          <b>Темна та світла тема</b><br>
+          Можливість перемикання стилю для зручності та економії енергії.
+        </div>
+      </div>
+    </div>
+
+    <!-- Третій ряд: 2 + 3 блоки -->
+    <div class="row mb-3">
+      <div class="col-12 col-md-6 d-flex flex-column">
+        <div class="block mb-2">
+          <b>Живий пошук</b><br>
+          Миттєвий пошук по всім даним та журналам прямо в адмінці.
+        </div>
+        <!-- xs: порожній простір замість 2-го блоку -->
+        <div class="block mb-2 d-none d-md-flex">
+          <b>Статистика і графіки</b><br>
+          Автоматичне побудування діаграм для швидкого аналізу.
+        </div>
+        <div class="block mb-2 d-md-none bg-white border-0" style="min-height: 80px;"></div>
+      </div>
+      <div class="col-12 col-md-6">
+        <div class="row h-100">
+          <div class="col-12 col-sm-4">
+            <div class="block h-100">
+              <b>Логування дій</b><br>
+              Історія всіх змін у системі та простий аудит.
+            </div>
+          </div>
+          <div class="col-12 col-sm-4">
+            <div class="block h-100">
+              <b>Зручні фільтри</b><br>
+              Швидко знаходь потрібне серед великої кількості об'єктів.
+            </div>
+          </div>
+          <div class="col-12 col-sm-4">
+            <div class="block h-100">
+              <b>Експорт даних</b><br>
+              Завантаження звітів у PDF/Excel у декілька кліків.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="bg-primary text-white text-center py-3 mt-4">
+    &copy; 2025 Адмін-панель | Bootstrap адаптивний макет
+  </footer>
+
+  <!-- Bootstrap JS (для компонентів, якщо потрібно) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

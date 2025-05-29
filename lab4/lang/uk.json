@@ -49,7 +49,7 @@
   "ad_text": "Це реклама!",
   "browser_data": "Дані браузера",
   "we_are_hiring": "Ми шукаємо",
-  "progress_label": "Ми вже набрали <span class='progress-bar__percent'>60%</span> команди",
+  "progress_label": "Ми вже набрали",
   "frontend_dev": "Front-end розробник",
   "frontend_desc": "Розробка сучасних інтерфейсів для наших продуктів. Вітається знання HTML, CSS (БЕМ), JavaScript, React.",
   "frontend_details": "Досвід: від 1 року | Фултайм",
